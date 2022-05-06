@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./style.css'>
     <title>TestPage</title>
 </head>
 <body>
     <p>The quick brown fox jumps over the lazy dog</p>
+    <br>
+    <div class="clickEvent">
+        <button id="btn">Please click</button>
+        <br>
+        <img src="./asset/rick.gif" id="img" alt="">
+    </div>
 
-    <script src="index.js"></script>
+    <div class="mouseEvent">
+        <div>Horizontal : <span class="horizontal">0</span></div>
+        <div>Vertical : <span class="vertical">0</span></div>
+    </div>
+
+    <div class="inputEvent">
+        <label for="input">Sup ?</label>
+        <br>
+        <input type="text" id="input">
+        <div class="result"></div>
+        <div>Your Answer : <span class="yourAnswer"></span></div>
+    </div>
+
+    <div class="themeContainer">
+        <div class="theme" id="dark"></div>
+        <div class="theme" id="salmon"></div>
+    </div>
+    
+    
 </body>
+<script src="index.js"></script>
 </html>
