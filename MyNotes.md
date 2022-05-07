@@ -1,19 +1,23 @@
 # Notes for coding in JS
 
-lang="US_en"
+lang="US_en, FR_fr"
 
-## Basics
+### Basics
 
 Good website : https://htmlcheatsheet.com/js/
 
-### Theory
+Lectures (in french) : 
++ https://youtu.be/QB1DTl7HFnc
++ https://youtu.be/RVgzV2h5JWU
 
-__variables__
+### I. DOM Manipulation
+
+#### __variables__
 syntax : let variable = 'string'
 display in console test : console.log(variable)
 constant : const constant = 'string' __can never be changed__
 
-__functions__
+#### __functions__
 declare :
 ```js
 function doSthg() {
@@ -48,7 +52,7 @@ doSthg3('the laundry');
 doSthg3('ride bentleys and coupes')
 ```
 
-__events__
+#### __events__
 
 **Click of a button :**
 
@@ -63,7 +67,7 @@ btn.addEventListener('click', () => {
 ```
 If we want to record the position of the mouse :
 ```html
-<div class="mouseEvent">
+    <div class="mouseEvent">
         <div>Horizontal : <span class="horizontal">0</span></div>
         <div>Vertical : <span class="vertical">0</span></div>
     </div>
@@ -155,3 +159,24 @@ document.getElementById('input').addEventListener('input', (e) => {
     color : white;
 }
 ```
+### II. Data Manipulation
+different type of data :
+
+```js 
+const array = [];
+const string = 'this is a string';
+const number = 42;
+const bool = TRUE;
+```
+quick work with arrays :
+
+```js
+const array = ['Paris', ['Biarritz', 'LA', 'Avignon'], 42069, false];
+
+for (i = 0; i < array.length; i++) {        //archaic
+    console.log(typeof array[i]);
+}
+
+array.sort() && console.log(array[i]);      //coding in ifless
+```
+

@@ -5,7 +5,7 @@ btn.addEventListener('click', () => {
     console.log('ok');
     img.classList.toggle('show');
 })
-//********************************************** */
+//*********************************************************/
 const mouseEvent = document.querySelector('.mouseEvent');
 const horizontal = document.querySelector('.horizontal');
 const vertical = document.querySelector('.vertical');
@@ -22,7 +22,7 @@ mouseEvent.addEventListener('mousemove',(e)=>{
     }
 })
 
-//******************************************************** */
+//*********************************************************/
 const yourAnswer = document.querySelector('.yourAnswer')
 
 document.getElementById('input').addEventListener('input', (e) => {
@@ -30,7 +30,7 @@ document.getElementById('input').addEventListener('input', (e) => {
 
 })
 
-//******************************************************** */
+//*********************************************************/
 const theme = document.querySelectorAll('.theme');
 
 theme.forEach((item) => {
@@ -49,3 +49,22 @@ theme.forEach((item) => {
         }
     })
 })
+
+//*************************** DATA MANIPULATION ******************************/
+const inputVideoUrl = document.querySelector("#inputVideoUrl");
+const video = document.querySelector("#video");
+let link = " ";
+
+inputVideoUrl.addEventListener("inputVideoUrl", (e) => {
+    link = e.target.value;
+    console.log(link);
+
+    if (link) {
+    video.innerHTML = '<iframe width="1080" height="720" src="${link}" title="YouTube video player" ></iframe>';
+}
+})
+
+const changeLink = (linkToChange) => {
+    let embed = linkToChange.replace(('watch?v=', 'embed/'));
+    link = embed.split('&')[0];
+}
