@@ -1,5 +1,7 @@
 # Notes for coding in JS
 
+lang="US_en"
+
 ## Basics
 
 Good website : https://htmlcheatsheet.com/js/
@@ -48,7 +50,7 @@ doSthg3('ride bentleys and coupes')
 
 __events__
 
-Click of a button :
+**Click of a button :**
 
 ```js
 const btn = document.querySelector('#btn');
@@ -76,8 +78,8 @@ If we want to record the position of the mouse :
     padding : 10px;
 }
 ```
-/*********************************************************/
-Follow mouse position :
+
+**Follow mouse position :**
 
 ```js
 const mouseEvent = document.querySelector('.mouseEvent');
@@ -104,8 +106,9 @@ mouseEvent.addEventListener('mousemove',(e)=>{
         document.body.style.filter = 'none';
     }
 ```
-/*********************************************************/
-Input event :
+
+**Input event :**
+
 ```html
     <div class="inputEvent">
         <label for="input">Sup ?</label>
@@ -122,9 +125,8 @@ document.getElementById('input').addEventListener('input', (e) => {
 
 })
 ```
-/*********************************************************/
 
-Theme container :
+**Theme container :**
 
 ```html
     <div class="themeContainer">
@@ -153,6 +155,3 @@ Theme container :
     color : white;
 }
 ```
-
-
-
