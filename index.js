@@ -68,3 +68,21 @@ const changeLink = (linkToChange) => {
     let embed = linkToChange.replace(('watch?v=', 'embed/'));
     link = embed.split('&')[0];
 }
+
+//*************************** API ******************************/
+const quote = document.getElementById('quote');
+
+const getQuote = () => {
+   
+    fetch('https://api.quotable.io/random')
+    .then (response => response.json())
+    .then (data => {
+        //console.log(data.content);
+        //console.log(data.content + '-' + data.author);
+        quote.innerHTML = data.content + '<br> -' + data.author;
+    })
+
+}
+getQuote();
+
+quote.addEventListener('click', () => getQuote());

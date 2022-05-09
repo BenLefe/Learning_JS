@@ -54,3 +54,11 @@ img {
     background: salmon;
     color : white;
 }
+
+#quote {
+    font-size: 2rem;
+    color: black;
+    border-radius: 5px;
+    background: cyan;
+    cursor: pointer;
+}

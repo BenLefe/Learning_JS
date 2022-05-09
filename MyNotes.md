@@ -179,4 +179,22 @@ for (i = 0; i < array.length; i++) {        //archaic
 
 array.sort() && console.log(array[i]);      //coding in ifless
 ```
+#### __API__
+```js
+const quote = document.getElementById('quote');
 
+const getQuote = () => {
+   
+    fetch('https://api.quotable.io/random')
+    .then (response => response.json())
+    .then (data => {
+        //console.log(data.content);
+        //console.log(data.content + '-' + data.author);
+        quote.innerHTML = data.content + '<br> -' + data.author;
+    })
+
+}
+getQuote();
+
+quote.addEventListener('click', () => getQuote());
+```
